@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DirectivesComponent } from './directives/directives.component';
+import { DirectivesComponent } from './components/structural_directives/directives.component';
 
 @Component({
   selector: 'app-root',
