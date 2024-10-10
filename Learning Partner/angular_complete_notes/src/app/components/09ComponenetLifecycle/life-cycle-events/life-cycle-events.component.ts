@@ -68,8 +68,19 @@ export class LifeCycleEventsComponent
     {
       interface: 'OnDestroy',
 
-      description: ['mainly used to unsubscribe api calls', 'performing distroy on page / redirect to another page this will trigger'],
-    }
+      description: [
+        'mainly used to unsubscribe api calls',
+        'performing distroy on page / redirect to another page this will trigger',
+      ],
+    },
+    {
+      interface: 'OnChanges',
+
+      description: [
+        'mainly used to get if any changes is happed',
+        'ngOnCganges(changes: SimpleChange):void{}'
+      ],
+    },
   ];
   constructor() {
     console.log('constrctor');
