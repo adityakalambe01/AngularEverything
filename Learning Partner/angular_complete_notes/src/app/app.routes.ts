@@ -5,6 +5,7 @@ import { IfIfelseElseifComponent } from './components/03ControlFlow/if-ifelse-el
 import { ForSwithchComponent } from './components/03ControlFlow/for-swithch/for-swithch.component';
 import { DefaultPipesComponent } from './components/04pipe/default-pipes/default-pipes.component';
 import { LifeCycleEventsComponent } from './components/09ComponenetLifecycle/life-cycle-events/life-cycle-events.component';
+import { NgTemplateDirectiveComponent } from './components/02directives/ng-template-directive/ng-template-directive.component';
 
 
 export const routes: Routes = [
@@ -31,5 +32,9 @@ export const routes: Routes = [
   {
     path: 'component-lifecycle',
     component: LifeCycleEventsComponent
+  },
+  {
+    path: 'ng-temp-dir',
+    component: NgTemplateDirectiveComponent
   }
 ];

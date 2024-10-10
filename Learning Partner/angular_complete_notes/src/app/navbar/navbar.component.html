@@ -28,13 +28,13 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Dropdown
+            Directives
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/str-dir']">Structural Directive</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/atb-dir']">Attribute Directive</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/ng-temp-dir']">ng-Template</a></li>
           </ul>
         </li>
 
