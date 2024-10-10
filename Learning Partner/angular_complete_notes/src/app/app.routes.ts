@@ -4,6 +4,7 @@ import { StructuralDirectiveComponent } from './components/02directives/structur
 import { IfIfelseElseifComponent } from './components/03ControlFlow/if-ifelse-elseif/if-ifelse-elseif.component';
 import { ForSwithchComponent } from './components/03ControlFlow/for-swithch/for-swithch.component';
 import { DefaultPipesComponent } from './components/04pipe/default-pipes/default-pipes.component';
+import { LifeCycleEventsComponent } from './components/09ComponenetLifecycle/life-cycle-events/life-cycle-events.component';
 
 
 export const routes: Routes = [
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path : 'default-pipe',
     component : DefaultPipesComponent
+  },
+  {
+    path: 'component-lifecycle',
+    component: LifeCycleEventsComponent
   }
 ];
