@@ -55,3 +55,47 @@ export const routes: Routes = [
     ],
   },
 ];
+
+// const routes: Routes = [
+//   {
+//     path: '',
+//     redirectTo: 'admin-login',
+//     pathMatch: 'full',
+//   },
+//   {
+//     path: 'admin-login',
+//     component: AdminLoginComponent,
+//   },
+//   {
+//     path: '',
+//     component: LayoutComponent,
+//     children: [],
+//   },{
+//         path: 'atb-dir',
+//         component: AttributeDirectiveComponent,
+//       },
+//       {
+//         path: 'str-dir',
+//         component: StructuralDirectiveComponent,
+//       },
+//       {
+//         path: 'controlflow-ifelse',
+//         component: IfIfelseElseifComponent,
+//       },
+//       {
+//         path: 'for-swithch',
+//         component: ForSwithchComponent,
+//       },
+//       {
+//         path: 'default-pipe',
+//         component: DefaultPipesComponent,
+//       },
+//       {
+//         path: 'component-lifecycle',
+//         component: LifeCycleEventsComponent,
+//       },
+//       {
+//         path: 'ng-temp-dir',
+//         component: NgTemplateDirectiveComponent,
+//       },
+// ];
