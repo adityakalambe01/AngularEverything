@@ -7,6 +7,7 @@ import { GetApiComponent } from './components/06Apis/get-api/get-api.component';
 import { PostApiComponent } from './components/06Apis/post-api/post-api.component';
 import { PutApiComponent } from './components/06Apis/put-api/put-api.component';
 import { DeleteApiComponent } from './components/06Apis/delete-api/delete-api.component';
+import { ThroughServiceComponent } from './components/07Service/through-service/through-service.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { DeleteApiComponent } from './components/06Apis/delete-api/delete-api.co
     GetApiComponent,
     PostApiComponent,
     PutApiComponent,
-    DeleteApiComponent
+    DeleteApiComponent,
+    ThroughServiceComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
