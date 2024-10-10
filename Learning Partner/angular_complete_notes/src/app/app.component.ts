@@ -4,6 +4,9 @@ import { AttributeDirectiveComponent } from './components/02directives/attribute
 import { TemplateFormComponent } from "./components/05Forms/template-form/template-form.component";
 import { ReactiveFormComponent } from './components/05Forms/reactive-form/reactive-form.component';
 import { GetApiComponent } from './components/06Apis/get-api/get-api.component';
+import { PostApiComponent } from './components/06Apis/post-api/post-api.component';
+import { PutApiComponent } from './components/06Apis/put-api/put-api.component';
+import { DeleteApiComponent } from './components/06Apis/delete-api/delete-api.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +16,16 @@ import { GetApiComponent } from './components/06Apis/get-api/get-api.component';
   //using routing
   // imports: [RouterOutlet, RouterLink],
 
-  imports: [RouterOutlet, RouterLink,TemplateFormComponent, ReactiveFormComponent, GetApiComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    GetApiComponent,
+    PostApiComponent,
+    PutApiComponent,
+    DeleteApiComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
