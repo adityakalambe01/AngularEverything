@@ -8,17 +8,23 @@ import { LifeCycleEventsComponent } from './components/09ComponenetLifecycle/lif
 import { NgTemplateDirectiveComponent } from './components/02directives/ng-template-directive/ng-template-directive.component';
 import { AdminLoginComponent } from './components/10Login/admin-login/admin-login.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AdminLoginThroughApiComponent } from './components/10Login/admin-login-through-api/admin-login-through-api.component';
+import { authGuard } from './service/auth.guard';
 
 //for admin application
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'admin-login',
+    redirectTo: 'admin-api-login',
     pathMatch: 'full',
   },
   {
     path: 'admin-login',
     component: AdminLoginComponent,
+  },
+  {
+    path: 'admin-api-login',
+    component: AdminLoginThroughApiComponent,
   },
   {
     path: '',
@@ -27,30 +33,37 @@ export const routes: Routes = [
       {
         path: 'atb-dir',
         component: AttributeDirectiveComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'str-dir',
         component: StructuralDirectiveComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'controlflow-ifelse',
         component: IfIfelseElseifComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'for-swithch',
         component: ForSwithchComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'default-pipe',
         component: DefaultPipesComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'component-lifecycle',
         component: LifeCycleEventsComponent,
+        canActivate: [authGuard],
       },
       {
         path: 'ng-temp-dir',
         component: NgTemplateDirectiveComponent,
+        canActivate: [authGuard],
       },
     ],
   },

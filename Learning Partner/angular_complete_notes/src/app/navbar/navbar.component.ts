@@ -14,4 +14,11 @@ export class NavbarComponent {
     localStorage.removeItem('loginUser');
     this.router.navigateByUrl('');
   }
+  constructor() {
+    const data = localStorage.getItem('loginUser');
+    if (data !== null) {
+      console.log(JSON.parse(data));
+      // JSON.parse(localStorage.getItem('loginUser'));
+    }
+  }
 }
