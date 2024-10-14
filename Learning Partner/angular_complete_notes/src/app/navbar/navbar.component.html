@@ -44,7 +44,7 @@
         </li> -->
       </ul>
       <form class="d-flex">
-        <select name="" id="">
+        <select name="selectedRole" [(ngModel)]="selectedRole" (ngModelChange)="onRoleChange($event)">
           <option value="" disabled selected>Choose Role...</option>
           <option value="user">User Role</option>
           <option value="admin">Admin Role</option>
@@ -54,3 +54,4 @@
     </div>
   </div>
 </nav>
+

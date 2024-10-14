@@ -1,8 +1,9 @@
 import { AsyncPipe, DatePipe, JsonPipe, LowerCasePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Lists } from '../../Utility';
 import { interval, map, Observable } from 'rxjs';
 import { NaPipe } from "../custom-pipe/na.pipe";
+import { DepartmentService } from '../../../service/department.service';
 
 @Component({
   selector: 'app-default-pipes',
@@ -14,8 +15,8 @@ import { NaPipe } from "../custom-pipe/na.pipe";
     DatePipe,
     JsonPipe,
     AsyncPipe,
-    NaPipe
-],
+    NaPipe,
+  ],
   templateUrl: './default-pipes.component.html',
   styleUrl: './default-pipes.component.css',
 })
@@ -34,14 +35,20 @@ export class DefaultPipesComponent {
     name: 'FFF',
     city: 'Thane',
     isActive: true,
-    state: undefined
+    state: undefined,
   };
 
   // for async pipe
   currentTime: Observable<Date> = new Observable<Date>();
+  currentRole: string = '';
 
+  deptService = inject(DepartmentService);
   constructor() {
     // this.currentTime = interval(1000).pipe(map(() => new Date()));
+    this.deptService.onRoleChange$.subscribe((res: string) => {
+      // debugger;
+      this.currentRole = res;
+    });
   }
 }
 
